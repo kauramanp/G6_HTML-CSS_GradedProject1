@@ -1,0 +1,108 @@
+.header {
+    padding: 10px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    margin: 0;
+    font-size: 30px;
+}
+
+.footer {
+    padding: 2px;
+    text-align: center;
+    background: black;
+    color: white;
+    margin: 0px;
+    font-size: 10px;
+}
+
+.menu-btn {
+    background-color: gray;
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bolder;
+    border: none;
+}
+
+.dropdown-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: aliceblue;
+    min-width: 160px;
+    z-index: 1;
+}
+
+nav {
+    background-color: gray;
+}
+
+.links-hidden {
+    display: inline-block;
+    color: blue;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.links-hidden {
+    display: block;
+}
+
+.links {
+    display: inline-block;
+}
+
+.links:hover {
+    background-color: black;
+}
+
+.dropdown-menu:hover .menu-content {
+    display: block;
+}
+
+.dropdown-menu:hover .menu-btn {
+    background-color: black;
+}
+
+.progress {
+    width: auto;
+    height: 400px;
+    border: 2px solid steelblue;
+    padding: 50px;
+    background-color: gray;
+    animation: riseDrop, riseDrop1;
+    animation-duration: 1s, 2s;
+    animation-delay: 0s, 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes riseDrop {
+    from {
+
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes riseDrop1 {
+    from {
+        background-color: aliceblue;
+        transform: translateX(100%);
+    }
+
+    to {
+        background-color: aqua;
+        transform: translateX(0%);
+    }
+}

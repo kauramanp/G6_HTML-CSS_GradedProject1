@@ -1,0 +1,46 @@
+<!Doctype html>
+<html>
+
+<head>
+    <style>
+        .progress {
+            width: auto;
+            height: 400px;
+            background-color: gray;
+            animation: riseDrop, riseDrop1;
+            animation-duration: 1s, 2s;
+            animation-delay: 0s, 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes riseDrop {
+            from {
+
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes riseDrop1 {
+            from {
+                background-color: aliceblue;
+                transform: translateX(100%);
+            }
+
+            to {
+                background-color: aqua;
+                transform: translateX(0%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="progress"></div>
+
+</body>
+
+</html>
