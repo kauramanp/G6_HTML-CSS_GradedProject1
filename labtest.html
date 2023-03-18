@@ -2,81 +2,75 @@
 <html>
 
 <head>
-    <style>
-        body {
-            background-image: url("Images/Lab-Test/lab-test.jpg");
-
-        }
-
-        div {
-            width: fit-content;
-            height: fit-content;
-            border: 1px solid white;
-            padding: 10px;
-            border-radius: 5px;
-            position: relative;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-        }
-
-        input {
-            background-color: white;
-            border: 0px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-top: 10px;
-            outline: none;
-            border-radius: 2px;
-        }
-
-        input:focus {
-            background-color: steelblue;
-            opacity: 0.35;
-            border: 0px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            padding-left: 5px;
-            padding-right: 5px;
-            margin-top: 10px;
-            outline: none;
-            border-radius: 2px;
-        }
-
-        input[type=submit] {
-            background-color: blueviolet;
-            color: white;
-            padding-left: 8px;
-            padding-right: 8px;
-            padding-top: 4px;
-            padding-bottom: 4px;
-            margin-top: 15px;
-            border-radius: 2px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/labtest.css">
+    <title>Lab Test Form</title>
 </head>
 
+
 <body>
-    <div>
-        <h2>Create Gmail Account</h2>
-        <form id="login" method="get">
-            <input type="name" name="name" id="name" placeholder="Enter your full name" required>
-            <br>
-            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number" required>
-            <br>
-            <input type="email" name="email" id="email" placeholder="Enter your email" required min="6666666666"
-                max="9999999999">
-            <br>
-            <input type="submit" name="reset" value="Reset">
-            <input type="submit" name="submit" value="Submit">
+    <form id="login" method="get">
+        <div class="center">
+            <div class="halfScreen">
+                <div class="inputForm">
+                    <h2>Please fill this form</h2>
+                    <div>
+                        <h2>1. Your Contact Details</h2>
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                        <input type="text" name="id" placeholder="Patient Id if exists"><br>
+                        <input type="text" name="cont_num" placeholder="Contact Number" required>
+                        <input type="text" name="email" placeholder="Email Id">
 
+                        <h2>2. Address</h2>
+                        <input type="text" name="house-no" placeholder="House Number" required>
+                        <input type="text" name="street" placeholder="Street" required><br>
+                        <input type="text" name="area" placeholder="Area" required> <br>
+                        <h3>District</h3>
+                        <select name="District" id="District" required>
+                            <option value="">Choose</option>
+                            <option value="Jalandhar">Jalandhar</option>
+                            <option value="Chandigarh">Chandigarh</option>
+                            <option value="Phagwara">Phagwara</option>
+                        </select>
+                        <h2>3. Choose the Test type</h2>
+                        <p>Check atleast one box without full</p>
+                        <input type="checkbox" id="c1" name="option1" value="CBC">
+                        <label for="c1">CBC</label>
+                        <br>
+                        <input type="checkbox" id="c2" name="option2" value="Complete Urine">
+                        <label for="c2">Complete Urine</label>
+                        <br>
+                        <input type="checkbox" id="c3" name="option3" value="Lipid Profile">
+                        <label for="c3">Lipid Profile</label>
+                        <br>
+                        <input type="checkbox" id="c4" name="option4" value="TSH">
+                        <label for="c3">Thyroid Stimulating Hormone(TSH)</label>
+                        <br>
+                        <input type="checkbox" id="c5" name="option5" value="Glucose Test">
+                        <label for="c1">Glucose Test</label>
+                        <h2>4. Do you want a hard copy of the report also?</h2>
+                        <input type="radio" id="c6" name="option" value="True" required>
+                        <label for="c6">Yes</label>
+                        <br>
+                        <input type="radio" id="c7" name="option" value="False">
+                        <label for="c7">No</label>
+                        <h2>Select Your Comfortable Date and Time</h2>
+                        <input type="datetime-local" value="datetime-local" required>
+                    </div>
 
-        </form>
-    </div>
+                </div>
+                <div>
+                    <img src="./images/Lab-Test/lab-test.jpg" alt="Testing">
+
+                </div>
+            </div>
+            <div id='buttons'>
+                <input type="reset">
+                <input type="submit">
+            </div>
+        </div>
+
+    </form>
+
 </body>
 
 </html>
